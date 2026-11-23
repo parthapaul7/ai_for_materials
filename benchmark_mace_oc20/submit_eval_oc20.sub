@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH -A naiss2025-3-31-gpu
+#SBATCH -p gpu
+#SBATCH -t 01:30:00
+#SBATCH --gpus=1
+#SBATCH -n 1
+#SBATCH -c 16
+#SBATCH --mem=50G
+#SBATCH --job-name=eval_oc20
+#SBATCH -o eval_oc20_%j.log
+#SBATCH -e eval_oc20_%j.err
+
+set -euo pipefail
+
+module purge
+module load GPU/Miniforge/26.9.4-1-eb
+
+PYTHON_BIN="/nobackup/proj/disk/materialsdesigndivision/personal/paul/conda_envs/gh200_mace/bin/python"
+
+echo "=========================================================="
+echo "Starting OC20 Model Evaluation on GH200"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "CUDA Device: ${CUDA_VISIBLE_DEVICES:-0}"
+echo "=========================================================="
+
+cd /nobackup/proj/disk/materialsdesigndivision/personal/paul/benchmark_mace_oc20
+
+$PYTHON_BIN eval_oc20.py
+$PYTHON_BIN plot_oc20.py
+
+echo "Evaluation finished at: $(date)"

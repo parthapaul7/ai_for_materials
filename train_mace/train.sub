@@ -1,0 +1,74 @@
+#!/bin/bash
+#SBATCH -A naiss2025-3-31-gpu
+#SBATCH -p gpu
+#SBATCH -t 24:00:00
+#SBATCH --gpus=4
+#SBATCH -n 4
+#SBATCH -c 72
+#SBATCH --mem=0
+#SBATCH --job-name=mace_4gpu
+#SBATCH -o train_4gpu_%j.log
+#SBATCH -e train_4gpu_%j.err
+
+set -euo pipefail
+
+module purge
+module load GPU/Miniforge/26.9.4-1-eb
+
+# Path to native ARM64 Python environment on NVIDIA GH200
+PYTHON_BIN="/nobackup/proj/disk/materialsdesigndivision/personal/paul/MLIP/conda_envs/gh200_mace/bin/python"
+
+TRAIN_DIR="/nobackup/proj/disk/materialsdesigndivision/personal/paul/MLIP/training_mace_head4"
+DATA_DIR="/nobackup/proj/disk/materialsdesigndivision/personal/paul/MLIP/dataset_preparation/output_lreal_auto"
+MODEL_PATH="/nobackup/proj/disk/materialsdesigndivision/shared/MLIPs/foundation_models/mace-mh-1.model"
+
+echo "=========================================================="
+echo "Starting Parallel MACE Fine-Tuning: 4x GH200 GPUs (DDP)"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "CUDA Devices: ${CUDA_VISIBLE_DEVICES:-all}"
+echo "=========================================================="
+
+cd "${TRAIN_DIR}"
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export OMP_NUM_THREADS=16
+
+# Distributed training using torchrun across all 4 GH200 GPUs
+$PYTHON_BIN -m torch.distributed.run \
+    --standalone \
+    --nproc_per_node=4 \
+    -m mace.cli.run_train \
+    --name="mace_ft_tio2_cobalt" \
+    --train_file="${DATA_DIR}/train.xyz" \
+    --valid_file="${DATA_DIR}/val.xyz" \
+    --energy_key="energy" \
+    --forces_key="forces" \
+    --foundation_model="${MODEL_PATH}" \
+    --foundation_head="oc20_usemppbe" \
+    --foundation_model_elements=True \
+    --E0s="${TRAIN_DIR}/E0s.json" \
+    --model="ScaleShiftMACE" \
+    --scaling="no_scaling" \
+    --energy_weight=1.0 \
+    --forces_weight=10.0 \
+    --lr=0.0001 \
+    --batch_size=4 \
+    --valid_batch_size=4 \
+    --max_num_epochs=50 \
+    --patience=10 \
+    --ema \
+    --ema_decay=0.99 \
+    --device=cuda \
+    --default_dtype="float64" \
+    --distributed \
+    --checkpoints_dir="${TRAIN_DIR}/checkpoints" \
+    --eval_interval=1 \
+    --keep_checkpoints \
+    --save_cpu \
+    --launcher="torchrun" \
+    --seed=42
+
+echo "=========================================================="
+echo "4-GPU Training finished at: $(date)"
+echo "=========================================================="

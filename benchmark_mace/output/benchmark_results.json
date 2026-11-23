@@ -1,0 +1,823 @@
+{
+  "benchmark_info": {
+    "timestamp": "2026-11-10 15:34:06",
+    "device": "cuda",
+    "model_path": "/nobackup/proj/disk/materialsdesigndivision/shared/MLIPs/foundation_models/mace-mh-1.model",
+    "total_test_frames": 5807,
+    "heads_tested": [
+      "omat_pbe",
+      "mp_pbe_refit_add",
+      "matpes_r2scan",
+      "oc20_usemppbe",
+      "finetuned_mace"
+    ]
+  },
+  "heads": {
+    "omat_pbe": {
+      "global_metrics": {
+        "energy_mae_mev_per_atom": 400.3454431526578,
+        "energy_rmse_mev_per_atom": 9641.618638664648,
+        "energy_r2": 0.9635394910575592,
+        "energy_shift_ev": 530.8404595231618,
+        "force_mae_ev_per_ang": 0.09375153980573218,
+        "force_rmse_ev_per_ang": 0.17409477227493794,
+        "force_cosine_similarity": 0.5934083004583927,
+        "element_force_mae_ev_per_ang": {
+          "Br": 0.15004879996185233,
+          "C": 0.15628632548539417,
+          "Co": 0.6429563211446495,
+          "H": 0.054544298225207045,
+          "O": 0.0762021599396013,
+          "Ti": 0.11986088686143538
+        }
+      },
+      "category_metrics": {
+        "adsorption": {
+          "energy_mae_mev_per_atom": 11.358354354901879,
+          "energy_rmse_mev_per_atom": 44.41816250793345,
+          "energy_r2": 0.9106219183240053,
+          "energy_shift_ev": 530.2333984323391,
+          "force_mae_ev_per_ang": 0.06907672698006316,
+          "force_rmse_ev_per_ang": 0.17732819088738477,
+          "force_cosine_similarity": 0.6700465840884988,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.21952261347630564,
+            "H": 0.07168294433011964,
+            "O": 0.0612187008193655,
+            "Ti": 0.07729075285364333
+          }
+        },
+        "cobalt_agglomeration": {
+          "energy_mae_mev_per_atom": 0.1260627721136192,
+          "energy_rmse_mev_per_atom": 0.19162962730663566,
+          "energy_r2": 0.6626107708724118,
+          "energy_shift_ev": 523.7296346424985,
+          "force_mae_ev_per_ang": 0.09566546678672384,
+          "force_rmse_ev_per_ang": 0.17585510412008112,
+          "force_cosine_similarity": 0.6307714765653717,
+          "element_force_mae_ev_per_ang": {
+            "Co": 0.7034589552491061,
+            "O": 0.07807579176442983,
+            "Ti": 0.1207149253569388
+          }
+        },
+        "general_relaxation": {
+          "energy_mae_mev_per_atom": 21435.940701944106,
+          "energy_rmse_mev_per_atom": 81676.75359085247,
+          "energy_r2": 0.9656154875685732,
+          "energy_shift_ev": 319.3964159033464,
+          "force_mae_ev_per_ang": 0.08542938317127306,
+          "force_rmse_ev_per_ang": 0.15635367766715466,
+          "force_cosine_similarity": 0.6655417334864949,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.1618994020502462,
+            "Co": 0.34459835298970604,
+            "H": 0.04109186358324357,
+            "O": 0.06971113068202466,
+            "Ti": 0.11150978197389394
+          }
+        },
+        "molecular_fragments": {
+          "energy_mae_mev_per_atom": 0.6408268639459158,
+          "energy_rmse_mev_per_atom": 1.1707640781590616,
+          "energy_r2": 0.9746206379239999,
+          "energy_shift_ev": 6.846694633456167,
+          "force_mae_ev_per_ang": 0.08145304981456486,
+          "force_rmse_ev_per_ang": 0.14480281822056623,
+          "force_cosine_similarity": 0.36969832395039426,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.11224605947967162,
+            "H": 0.04450143821643673
+          }
+        },
+        "neb_pathway": {
+          "energy_mae_mev_per_atom": 7.014847472070525,
+          "energy_rmse_mev_per_atom": 9.09444689590596,
+          "energy_r2": 0.9876673882651381,
+          "energy_shift_ev": 533.4284211632936,
+          "force_mae_ev_per_ang": 0.0947745503138595,
+          "force_rmse_ev_per_ang": 0.17487812380595474,
+          "force_cosine_similarity": 0.5874717499947741,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.14280983750755177,
+            "C": 0.16111471830275428,
+            "Co": 0.6371022598499196,
+            "H": 0.05453199841986177,
+            "O": 0.07682222051060504,
+            "Ti": 0.12143020092903807
+          }
+        },
+        "reaction_intermediates": {
+          "energy_mae_mev_per_atom": 1705.7136080794237,
+          "energy_rmse_mev_per_atom": 19974.46538382747,
+          "energy_r2": 0.9625242064067283,
+          "energy_shift_ev": 528.0177053852894,
+          "force_mae_ev_per_ang": 0.09388431352644679,
+          "force_rmse_ev_per_ang": 0.17830373068309188,
+          "force_cosine_similarity": 0.6109825632188315,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.20578637594326593,
+            "C": 0.12825674694792055,
+            "Co": 0.6822415483972138,
+            "H": 0.055531652177546506,
+            "O": 0.07709407873523579,
+            "Ti": 0.11884582311752274
+          }
+        },
+        "vibrational_analysis": {
+          "energy_mae_mev_per_atom": 619.1632333479967,
+          "energy_rmse_mev_per_atom": 8942.60273492577,
+          "energy_r2": 0.9647957060379377,
+          "energy_shift_ev": 529.7716310269357,
+          "force_mae_ev_per_ang": 0.07578978180406923,
+          "force_rmse_ev_per_ang": 0.14195359572009017,
+          "force_cosine_similarity": 0.6658231256392616,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.18449892513892432,
+            "C": 0.10871554040118828,
+            "Co": 0.777995013542649,
+            "H": 0.050083813557104076,
+            "O": 0.0635200781458551,
+            "Ti": 0.09683453136253506
+          }
+        }
+      },
+      "neb_pathway": {
+        "dft_barrier_ev": 0.8166331199995511,
+        "pred_barrier_ev": 0.7984325772508782,
+        "barrier_error_ev": 0.018200542748672888,
+        "dft_rxn_energy_ev": -1.283303480000086,
+        "pred_rxn_energy_ev": -0.3729310962985437,
+        "rxn_energy_error_ev": 0.9103723837015423,
+        "profile_mae_ev": 0.29295376330118317,
+        "dft_rel_energies": [
+          0.0,
+          0.3460302899998169,
+          0.6702190699998027,
+          0.8166331199995511,
+          0.7018301999996766,
+          0.31610982999973203,
+          -0.2561364800003503,
+          -0.8492924900001526,
+          -1.283303480000086
+        ],
+        "pred_rel_energies": [
+          0.0,
+          0.25482620795537514,
+          0.5669281583518568,
+          0.789301567815528,
+          0.7984325772508782,
+          0.5611518100331523,
+          0.20178333798412496,
+          -0.1444717251365546,
+          -0.3729310962985437
+        ]
+      }
+    },
+    "mp_pbe_refit_add": {
+      "global_metrics": {
+        "energy_mae_mev_per_atom": 408.28806795797493,
+        "energy_rmse_mev_per_atom": 9826.350979124247,
+        "energy_r2": 0.9621340671072477,
+        "energy_shift_ev": 540.9183164049579,
+        "force_mae_ev_per_ang": 0.08620368549381442,
+        "force_rmse_ev_per_ang": 0.16308003939231983,
+        "force_cosine_similarity": 0.5954921877828835,
+        "element_force_mae_ev_per_ang": {
+          "Br": 0.1426025274152308,
+          "C": 0.1412811594671621,
+          "Co": 0.5575616340252609,
+          "H": 0.04950882131447385,
+          "O": 0.06986144018054732,
+          "Ti": 0.11122331712191101
+        }
+      },
+      "category_metrics": {
+        "adsorption": {
+          "energy_mae_mev_per_atom": 11.23827884394952,
+          "energy_rmse_mev_per_atom": 43.94837116806561,
+          "energy_r2": 0.9125027231905019,
+          "energy_shift_ev": 540.0628554818459,
+          "force_mae_ev_per_ang": 0.06598671881778728,
+          "force_rmse_ev_per_ang": 0.17771031009255905,
+          "force_cosine_similarity": 0.6585067918480275,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.2284800102624325,
+            "H": 0.06673389237471519,
+            "O": 0.05726538705658028,
+            "Ti": 0.07541192820859485
+          }
+        },
+        "cobalt_agglomeration": {
+          "energy_mae_mev_per_atom": 0.11947198476997647,
+          "energy_rmse_mev_per_atom": 0.1892553208858748,
+          "energy_r2": 0.6709195359825815,
+          "energy_shift_ev": 533.8360207748236,
+          "force_mae_ev_per_ang": 0.08694084767696747,
+          "force_rmse_ev_per_ang": 0.16353431341139354,
+          "force_cosine_similarity": 0.6369181960730592,
+          "element_force_mae_ev_per_ang": {
+            "Co": 0.6100669812230437,
+            "O": 0.07110375743529708,
+            "Ti": 0.10989625926787366
+          }
+        },
+        "general_relaxation": {
+          "energy_mae_mev_per_atom": 21856.983121218538,
+          "energy_rmse_mev_per_atom": 83282.96611731287,
+          "energy_r2": 0.9643059298193768,
+          "energy_shift_ev": 325.58945919111954,
+          "force_mae_ev_per_ang": 0.0815471844199916,
+          "force_rmse_ev_per_ang": 0.15495844453062282,
+          "force_cosine_similarity": 0.6643693581377867,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.1522754539067762,
+            "Co": 0.33793605123082116,
+            "H": 0.035737462581132744,
+            "O": 0.0659019083338961,
+            "Ti": 0.107829957829244
+          }
+        },
+        "molecular_fragments": {
+          "energy_mae_mev_per_atom": 0.7894817137614644,
+          "energy_rmse_mev_per_atom": 1.379005948043091,
+          "energy_r2": 0.9647893369799452,
+          "energy_shift_ev": 6.867308694591875,
+          "force_mae_ev_per_ang": 0.07789987263828975,
+          "force_rmse_ev_per_ang": 0.15344381006641758,
+          "force_cosine_similarity": 0.4008391942653582,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.11074682945657782,
+            "H": 0.03848352445634406
+          }
+        },
+        "neb_pathway": {
+          "energy_mae_mev_per_atom": 7.002322484706468,
+          "energy_rmse_mev_per_atom": 9.274250377326162,
+          "energy_r2": 0.9872083063441021,
+          "energy_shift_ev": 543.5574762144729,
+          "force_mae_ev_per_ang": 0.08711582571084471,
+          "force_rmse_ev_per_ang": 0.16359583790161936,
+          "force_cosine_similarity": 0.589804061372481,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.13609555082740757,
+            "C": 0.14581457945040235,
+            "Co": 0.5511148810203413,
+            "H": 0.049468316692050006,
+            "O": 0.0704197896676294,
+            "Ti": 0.11261164711042043
+          }
+        },
+        "reaction_intermediates": {
+          "energy_mae_mev_per_atom": 1738.5935810899446,
+          "energy_rmse_mev_per_atom": 20359.001545494048,
+          "energy_r2": 0.9610573113069403,
+          "energy_shift_ev": 538.0940650191985,
+          "force_mae_ev_per_ang": 0.08599175701393386,
+          "force_rmse_ev_per_ang": 0.1662181840530256,
+          "force_cosine_similarity": 0.612941808282067,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.19263973303208343,
+            "C": 0.11315044465135203,
+            "Co": 0.5977807831514427,
+            "H": 0.051022652142303525,
+            "O": 0.07060776895531147,
+            "Ti": 0.10959077710261783
+          }
+        },
+        "vibrational_analysis": {
+          "energy_mae_mev_per_atom": 631.0282234204318,
+          "energy_rmse_mev_per_atom": 9113.94784790387,
+          "energy_r2": 0.9634378689005983,
+          "energy_shift_ev": 539.7017717962643,
+          "force_mae_ev_per_ang": 0.07049171704543455,
+          "force_rmse_ev_per_ang": 0.13755352056824505,
+          "force_cosine_similarity": 0.6656096174705046,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.1738884153351087,
+            "C": 0.0968201343761936,
+            "Co": 0.7216531818890729,
+            "H": 0.0442828038280501,
+            "O": 0.05829851198834813,
+            "Ti": 0.092132022795538
+          }
+        }
+      },
+      "neb_pathway": {
+        "dft_barrier_ev": 0.8166331199995511,
+        "pred_barrier_ev": 0.7168410570661763,
+        "barrier_error_ev": 0.09979206293337484,
+        "dft_rxn_energy_ev": -1.283303480000086,
+        "pred_rxn_energy_ev": -0.3804585927637163,
+        "rxn_energy_error_ev": 0.9028448872363697,
+        "profile_mae_ev": 0.28332478544194195,
+        "dft_rel_energies": [
+          0.0,
+          0.3460302899998169,
+          0.6702190699998027,
+          0.8166331199995511,
+          0.7018301999996766,
+          0.31610982999973203,
+          -0.2561364800003503,
+          -0.8492924900001526,
+          -1.283303480000086
+        ],
+        "pred_rel_energies": [
+          0.0,
+          0.23615111992603488,
+          0.5213526837383142,
+          0.7168410570661763,
+          0.7167590554545313,
+          0.49517268109593715,
+          0.15766568046910834,
+          -0.1685457945482085,
+          -0.3804585927637163
+        ]
+      }
+    },
+    "matpes_r2scan": {
+      "global_metrics": {
+        "energy_mae_mev_per_atom": 1149.8480193391852,
+        "energy_rmse_mev_per_atom": 27398.500612882504,
+        "energy_r2": 0.6986076076362565,
+        "energy_shift_ev": 1513.0031150482978,
+        "force_mae_ev_per_ang": 0.10023921728635482,
+        "force_rmse_ev_per_ang": 0.1741965229622682,
+        "force_cosine_similarity": 0.5799961611563484,
+        "element_force_mae_ev_per_ang": {
+          "Br": 0.11049556147805982,
+          "C": 0.13935486602734515,
+          "Co": 0.42159395630861163,
+          "H": 0.14826543643854578,
+          "O": 0.08580078105848599,
+          "Ti": 0.11869158756265698
+        }
+      },
+      "category_metrics": {
+        "adsorption": {
+          "energy_mae_mev_per_atom": 4.4714537515369805,
+          "energy_rmse_mev_per_atom": 17.49280542597412,
+          "energy_r2": 0.9861357839256086,
+          "energy_shift_ev": 1493.5366298369884,
+          "force_mae_ev_per_ang": 0.07811417022354211,
+          "force_rmse_ev_per_ang": 0.18923975593685433,
+          "force_cosine_similarity": 0.6253933994189917,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.19723191214479927,
+            "H": 0.1466021563576222,
+            "O": 0.07412868837859886,
+            "Ti": 0.07740447848094116
+          }
+        },
+        "cobalt_agglomeration": {
+          "energy_mae_mev_per_atom": 0.14048674587371004,
+          "energy_rmse_mev_per_atom": 0.22633700087905703,
+          "energy_r2": 0.529329457989561,
+          "energy_shift_ev": 1499.6719135514616,
+          "force_mae_ev_per_ang": 0.10086292797431268,
+          "force_rmse_ev_per_ang": 0.17347820111308612,
+          "force_cosine_similarity": 0.6358062834900937,
+          "element_force_mae_ev_per_ang": {
+            "Co": 0.38709253344993644,
+            "O": 0.08907985793769801,
+            "Ti": 0.11965857462294825
+          }
+        },
+        "general_relaxation": {
+          "energy_mae_mev_per_atom": 60564.47637187924,
+          "energy_rmse_mev_per_atom": 230734.06360503903,
+          "energy_r2": 0.722919686124738,
+          "energy_shift_ev": 903.0737641253695,
+          "force_mae_ev_per_ang": 0.09502091539575415,
+          "force_rmse_ev_per_ang": 0.16898834705879265,
+          "force_cosine_similarity": 0.6791745535946594,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.12572192823012943,
+            "Co": 0.2627272443420278,
+            "H": 0.1303754401987367,
+            "O": 0.08267910094334043,
+            "Ti": 0.11470137342802292
+          }
+        },
+        "molecular_fragments": {
+          "energy_mae_mev_per_atom": 0.732474375110247,
+          "energy_rmse_mev_per_atom": 1.3496685810606064,
+          "energy_r2": 0.966271564234377,
+          "energy_shift_ev": 11.226118634511518,
+          "force_mae_ev_per_ang": 0.11878317980838593,
+          "force_rmse_ev_per_ang": 0.18625011951569162,
+          "force_cosine_similarity": 0.15826443132383436,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.11803546336978804,
+            "H": 0.11968043953470343
+          }
+        },
+        "neb_pathway": {
+          "energy_mae_mev_per_atom": 31.990622989051538,
+          "energy_rmse_mev_per_atom": 38.37239075119478,
+          "energy_r2": 0.781517110473841,
+          "energy_shift_ev": 1520.9164982483405,
+          "force_mae_ev_per_ang": 0.10110436989122905,
+          "force_rmse_ev_per_ang": 0.17476234179589184,
+          "force_cosine_similarity": 0.576680145679772,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.1097834042811559,
+            "C": 0.1432375129198226,
+            "Co": 0.411122629083175,
+            "H": 0.1479220003262408,
+            "O": 0.08630011827339806,
+            "Ti": 0.1201916989281341
+          }
+        },
+        "reaction_intermediates": {
+          "energy_mae_mev_per_atom": 4840.695686876961,
+          "energy_rmse_mev_per_atom": 56591.54165837706,
+          "energy_r2": 0.6931179528703777,
+          "energy_shift_ev": 1505.792441071048,
+          "force_mae_ev_per_ang": 0.10093164068293595,
+          "force_rmse_ev_per_ang": 0.17703301597068552,
+          "force_cosine_similarity": 0.5921963419503483,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.11042113578511754,
+            "C": 0.11786570845656566,
+            "Co": 0.518169573660715,
+            "H": 0.15099878946702486,
+            "O": 0.08703351816502097,
+            "Ti": 0.11763689553382976
+          }
+        },
+        "vibrational_analysis": {
+          "energy_mae_mev_per_atom": 1721.756118250226,
+          "energy_rmse_mev_per_atom": 24862.97245457588,
+          "energy_r2": 0.7274795199070778,
+          "energy_shift_ev": 1500.5605160222958,
+          "force_mae_ev_per_ang": 0.08387626192500774,
+          "force_rmse_ev_per_ang": 0.14810388897524496,
+          "force_cosine_similarity": 0.6097326021263627,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.1414703568307058,
+            "C": 0.0968206493968991,
+            "Co": 0.38267767564303945,
+            "H": 0.15088659691028541,
+            "O": 0.07402372956420908,
+            "Ti": 0.09685905703983896
+          }
+        }
+      },
+      "neb_pathway": {
+        "dft_barrier_ev": 0.8166331199995511,
+        "pred_barrier_ev": 0.6673564809370873,
+        "barrier_error_ev": 0.1492766390624638,
+        "dft_rxn_energy_ev": -1.283303480000086,
+        "pred_rxn_energy_ev": -0.9022325750720483,
+        "rxn_energy_error_ev": 0.38107090492803763,
+        "profile_mae_ev": 0.14302598134584818,
+        "dft_rel_energies": [
+          0.0,
+          0.3460302899998169,
+          0.6702190699998027,
+          0.8166331199995511,
+          0.7018301999996766,
+          0.31610982999973203,
+          -0.2561364800003503,
+          -0.8492924900001526,
+          -1.283303480000086
+        ],
+        "pred_rel_energies": [
+          0.0,
+          0.23066354971342662,
+          0.504780969512467,
+          0.6673564809370873,
+          0.6110550381954454,
+          0.31486377411965805,
+          -0.13251855423186498,
+          -0.588850186104537,
+          -0.9022325750720483
+        ]
+      }
+    },
+    "oc20_usemppbe": {
+      "global_metrics": {
+        "energy_mae_mev_per_atom": 275.01027340361026,
+        "energy_rmse_mev_per_atom": 6622.408578607271,
+        "energy_r2": 0.9827905839275917,
+        "energy_shift_ev": 364.58700798925804,
+        "force_mae_ev_per_ang": 0.08044007469201006,
+        "force_rmse_ev_per_ang": 0.1612397159602973,
+        "force_cosine_similarity": 0.6055249516730288,
+        "element_force_mae_ev_per_ang": {
+          "Br": 0.1672319681563659,
+          "C": 0.1533304616292486,
+          "Co": 0.382521261922284,
+          "H": 0.03793885669452505,
+          "O": 0.06865221677340502,
+          "Ti": 0.09694072509281033
+        }
+      },
+      "category_metrics": {
+        "adsorption": {
+          "energy_mae_mev_per_atom": 12.52956222098931,
+          "energy_rmse_mev_per_atom": 48.99754358668033,
+          "energy_r2": 0.8912433685335444,
+          "energy_shift_ev": 364.2537067182722,
+          "force_mae_ev_per_ang": 0.0629632480674879,
+          "force_rmse_ev_per_ang": 0.1824589873191287,
+          "force_cosine_similarity": 0.754002746065002,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.22969895742901913,
+            "H": 0.04743071060763717,
+            "O": 0.0568814941889539,
+            "Ti": 0.06757252044165897
+          }
+        },
+        "cobalt_agglomeration": {
+          "energy_mae_mev_per_atom": 0.13064464396370692,
+          "energy_rmse_mev_per_atom": 0.19565186579558602,
+          "energy_r2": 0.6482987663257196,
+          "energy_shift_ev": 360.69652358059517,
+          "force_mae_ev_per_ang": 0.07803837164040135,
+          "force_rmse_ev_per_ang": 0.1566654634742633,
+          "force_cosine_similarity": 0.6345542617183345,
+          "element_force_mae_ev_per_ang": {
+            "Co": 0.37651371931398325,
+            "O": 0.06909352320611373,
+            "Ti": 0.09095347938108354
+          }
+        },
+        "general_relaxation": {
+          "energy_mae_mev_per_atom": 14847.787717358899,
+          "energy_rmse_mev_per_atom": 56607.583034452335,
+          "energy_r2": 0.9841367710344139,
+          "energy_shift_ev": 221.17232272298006,
+          "force_mae_ev_per_ang": 0.07694426552863816,
+          "force_rmse_ev_per_ang": 0.16013201783887188,
+          "force_cosine_similarity": 0.7111439198053958,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.15165557147580688,
+            "Co": 0.3185017283769053,
+            "H": 0.031734835056136744,
+            "O": 0.06881135366764472,
+            "Ti": 0.0882090453531361
+          }
+        },
+        "molecular_fragments": {
+          "energy_mae_mev_per_atom": 0.8754764451784544,
+          "energy_rmse_mev_per_atom": 1.2919123993605404,
+          "energy_r2": 0.9690964723552422,
+          "energy_shift_ev": 4.926787704404881,
+          "force_mae_ev_per_ang": 0.09388039272205677,
+          "force_rmse_ev_per_ang": 0.18176543962857653,
+          "force_cosine_similarity": 0.3537044567958288,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.14543239318480675,
+            "H": 0.032017992166756847
+          }
+        },
+        "neb_pathway": {
+          "energy_mae_mev_per_atom": 4.763751606300068,
+          "energy_rmse_mev_per_atom": 6.827172974970268,
+          "energy_r2": 0.9930307867371349,
+          "energy_shift_ev": 366.3639729874551,
+          "force_mae_ev_per_ang": 0.08109448707968607,
+          "force_rmse_ev_per_ang": 0.16167109047624584,
+          "force_cosine_similarity": 0.5929577595125534,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.1597870132457714,
+            "C": 0.15506075642654596,
+            "Co": 0.3769006715542608,
+            "H": 0.03842999614158897,
+            "O": 0.06916163220885624,
+            "Ti": 0.09784769577451943
+          }
+        },
+        "reaction_intermediates": {
+          "energy_mae_mev_per_atom": 1172.6292842642524,
+          "energy_rmse_mev_per_atom": 13730.289255009719,
+          "energy_r2": 0.982269344552904,
+          "energy_shift_ev": 363.00835845854334,
+          "force_mae_ev_per_ang": 0.07981544903541594,
+          "force_rmse_ev_per_ang": 0.16081225830267953,
+          "force_cosine_similarity": 0.6718256024526056,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.21476135439662955,
+            "C": 0.14071502746083714,
+            "Co": 0.4303649461082983,
+            "H": 0.03848472444776016,
+            "O": 0.06780078556922557,
+            "Ti": 0.09586893066151168
+          }
+        },
+        "vibrational_analysis": {
+          "energy_mae_mev_per_atom": 422.8969536325636,
+          "energy_rmse_mev_per_atom": 6107.588183660568,
+          "energy_r2": 0.983606873112142,
+          "energy_shift_ev": 362.74870699756684,
+          "force_mae_ev_per_ang": 0.07124665297274868,
+          "force_rmse_ev_per_ang": 0.14593544950767817,
+          "force_cosine_similarity": 0.6957799329170011,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.25127539382889896,
+            "C": 0.1349368849774033,
+            "Co": 0.3929980510081203,
+            "H": 0.023160706159709984,
+            "O": 0.06177894260933135,
+            "Ti": 0.08666819828330286
+          }
+        }
+      },
+      "neb_pathway": {
+        "dft_barrier_ev": 0.8166331199995511,
+        "pred_barrier_ev": 0.7940912763119741,
+        "barrier_error_ev": 0.022541843687577057,
+        "dft_rxn_energy_ev": -1.283303480000086,
+        "pred_rxn_energy_ev": -0.4658289354938461,
+        "rxn_energy_error_ev": 0.8174745445062399,
+        "profile_mae_ev": 0.2598320604106953,
+        "dft_rel_energies": [
+          0.0,
+          0.3460302899998169,
+          0.6702190699998027,
+          0.8166331199995511,
+          0.7018301999996766,
+          0.31610982999973203,
+          -0.2561364800003503,
+          -0.8492924900001526,
+          -1.283303480000086
+        ],
+        "pred_rel_energies": [
+          0.0,
+          0.29404462115780916,
+          0.6047771877765626,
+          0.7940912763119741,
+          0.7794621858079154,
+          0.5476372421799169,
+          0.17405189793635145,
+          -0.20759566148808517,
+          -0.4658289354938461
+        ]
+      }
+    },
+    "finetuned_mace": {
+      "global_metrics": {
+        "energy_mae_mev_per_atom": 1.8212379796081828,
+        "energy_rmse_mev_per_atom": 9.405830519299247,
+        "energy_r2": 0.9998212421399925,
+        "energy_shift_ev": -0.1655776875436641,
+        "force_mae_ev_per_ang": 0.00828506469183832,
+        "force_rmse_ev_per_ang": 0.02852340405987408,
+        "force_cosine_similarity": 0.766405103398672,
+        "element_force_mae_ev_per_ang": {
+          "Br": 0.04729773229556665,
+          "C": 0.03439180559303021,
+          "Co": 0.0769300499684713,
+          "H": 0.011301726967999767,
+          "O": 0.006163305738579161,
+          "Ti": 0.009082545351168913
+        }
+      },
+      "category_metrics": {
+        "adsorption": {
+          "energy_mae_mev_per_atom": 15.34109497237126,
+          "energy_rmse_mev_per_atom": 59.9906779774478,
+          "energy_r2": 0.8369689787782121,
+          "energy_shift_ev": 4.597866291626947,
+          "force_mae_ev_per_ang": 0.02126448466664316,
+          "force_rmse_ev_per_ang": 0.13551687021458889,
+          "force_cosine_similarity": 0.8463758413584395,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.18020485962986,
+            "H": 0.03567122185556183,
+            "O": 0.01772405970177226,
+            "Ti": 0.019938885263334583
+          }
+        },
+        "cobalt_agglomeration": {
+          "energy_mae_mev_per_atom": 0.09285935312069295,
+          "energy_rmse_mev_per_atom": 0.15078732566486042,
+          "energy_r2": 0.7911013749545432,
+          "energy_shift_ev": -1.7843890040389547,
+          "force_mae_ev_per_ang": 0.012598361742033711,
+          "force_rmse_ev_per_ang": 0.04016824613596898,
+          "force_cosine_similarity": 0.8514155801734847,
+          "element_force_mae_ev_per_ang": {
+            "Co": 0.1363226991815558,
+            "O": 0.009908899310889077,
+            "Ti": 0.015915214313664282
+          }
+        },
+        "general_relaxation": {
+          "energy_mae_mev_per_atom": 51.85483632073837,
+          "energy_rmse_mev_per_atom": 189.93492996413795,
+          "energy_r2": 0.9999989697303625,
+          "energy_shift_ev": -0.7051616148685731,
+          "force_mae_ev_per_ang": 0.02594155121998539,
+          "force_rmse_ev_per_ang": 0.05490920888501342,
+          "force_cosine_similarity": 0.8392384465986362,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.10575154854747483,
+            "Co": 0.15989729226390167,
+            "H": 0.023636323022649494,
+            "O": 0.02050270489782523,
+            "Ti": 0.03149701529070868
+          }
+        },
+        "molecular_fragments": {
+          "energy_mae_mev_per_atom": 1.0695065317132404,
+          "energy_rmse_mev_per_atom": 2.2162639895352365,
+          "energy_r2": 0.9090537274594703,
+          "energy_shift_ev": 0.9291906435857693,
+          "force_mae_ev_per_ang": 0.11791379628533116,
+          "force_rmse_ev_per_ang": 0.21382299840231936,
+          "force_cosine_similarity": 0.39130087836463157,
+          "element_force_mae_ev_per_ang": {
+            "C": 0.1894663603342606,
+            "H": 0.03205071942661587
+          }
+        },
+        "neb_pathway": {
+          "energy_mae_mev_per_atom": 1.3149380748822774,
+          "energy_rmse_mev_per_atom": 3.9374678960150495,
+          "energy_r2": 0.9976332742267466,
+          "energy_shift_ev": -0.3035830125971071,
+          "force_mae_ev_per_ang": 0.007404927643753065,
+          "force_rmse_ev_per_ang": 0.023087897428572875,
+          "force_cosine_similarity": 0.7603502444319917,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.04920454375453966,
+            "C": 0.03050000777877315,
+            "Co": 0.056978602190592934,
+            "H": 0.010891981344805401,
+            "O": 0.005497862887822389,
+            "Ti": 0.008182269621183156
+          }
+        },
+        "reaction_intermediates": {
+          "energy_mae_mev_per_atom": 2.9673171613357576,
+          "energy_rmse_mev_per_atom": 16.80552091276943,
+          "energy_r2": 0.9999967080696548,
+          "energy_shift_ev": 0.10437097405342377,
+          "force_mae_ev_per_ang": 0.013418177828788935,
+          "force_rmse_ev_per_ang": 0.04022338750561788,
+          "force_cosine_similarity": 0.8500924043664857,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.03467563651438678,
+            "C": 0.055882963073972704,
+            "Co": 0.23170993001160542,
+            "H": 0.014477797967890893,
+            "O": 0.009620467858298962,
+            "Ti": 0.013894158397472024
+          }
+        },
+        "vibrational_analysis": {
+          "energy_mae_mev_per_atom": 4.1552939804212325,
+          "energy_rmse_mev_per_atom": 26.013002110187468,
+          "energy_r2": 0.999976014055006,
+          "energy_shift_ev": 1.241099371774023,
+          "force_mae_ev_per_ang": 0.011907566418879176,
+          "force_rmse_ev_per_ang": 0.027692966332621794,
+          "force_cosine_similarity": 0.6755412846330991,
+          "element_force_mae_ev_per_ang": {
+            "Br": 0.028000042070192136,
+            "C": 0.038110355008803595,
+            "Co": 0.1765725986453803,
+            "H": 0.007349607578211673,
+            "O": 0.009521592154686917,
+            "Ti": 0.014286823164145777
+          }
+        }
+      },
+      "neb_pathway": {
+        "dft_barrier_ev": 0.8166331199995511,
+        "pred_barrier_ev": 0.7922665720093391,
+        "barrier_error_ev": 0.024366547990211984,
+        "dft_rxn_energy_ev": -1.283303480000086,
+        "pred_rxn_energy_ev": -1.1296349561334864,
+        "rxn_energy_error_ev": 0.15366852386659957,
+        "profile_mae_ev": 0.08540920730021956,
+        "dft_rel_energies": [
+          0.0,
+          0.3460302899998169,
+          0.6702190699998027,
+          0.8166331199995511,
+          0.7018301999996766,
+          0.31610982999973203,
+          -0.2561364800003503,
+          -0.8492924900001526,
+          -1.283303480000086
+        ],
+        "pred_rel_energies": [
+          0.0,
+          0.34951626765086985,
+          0.651986870330802,
+          0.7922665720093391,
+          0.7779615570921123,
+          0.4832121591498435,
+          -0.08536166829026115,
+          -0.6943713714276782,
+          -1.1296349561334864
+        ]
+      }
+    }
+  },
+  "neb_pathway_benchmarks": {}
+}
